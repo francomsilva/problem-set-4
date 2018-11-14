@@ -4,7 +4,7 @@
 
 function hello() {
 
-var div=document.getElementById ("output1");
+let div=document.getElementById ("output1");
   div.innerHTML="Hello, AP Computer Science Principles!" ;
 
   ////////////////// DO NOT MODIFY
@@ -43,7 +43,7 @@ function celsius() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-  var fahrenheit = ((cels * 9/5) + 32).toFixed(2);
+  let fahrenheit = ((cels * 9/5) + 32).toFixed(2);
   document.getElementById("output3").innerHTML=(cels + " degrees Celsius equals " + fahrenheit + " degrees Fahrenheit.");
 
   ////////////////////////// DO NOT MODIFY
@@ -64,7 +64,7 @@ function fahrenheit() {
   // The above code generates a random number between -100 and 1000
   // (inclusive), and rounds this value to 2 decimal places.
 
-  var celsius = ((fahr -32) * 5/9).toFixed(2)
+  let celsius = ((fahr -32) * 5/9).toFixed(2)
   document.getElementById("output4").innerHTML=(fahr + " degrees Fahrenheit equals " + celsius + " degrees Celsius.");
 
   ///////////////////////////// DO NOT MODIFY
@@ -89,7 +89,11 @@ function inches() {
   let inches = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-
+let miles=Math.floor(inches/63360);
+let yards=Math.floor(inches/36);
+let feet=Math.floor(inches/12);
+inches=Math.floor(inches/1);
+document.getElementById("output5").innerHTML=("Miles: " + miles + "<br>Yards: " + yards + "<br>Feet: " + feet + "<br>Inches: " + inches)
 
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
@@ -185,8 +189,11 @@ function money() {
   let pennies = input; // DO NOT MODIFY
   /////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 9 CODE HERE
-
+let dollars=Math.floor(pennies/100);
+let quarters=Math.floor((pennies-(dollars+100))/25);
+let dimes=Math.floor((pennies-(dollars*100) - (quarters*25))/10);
+let nickles=Math.floor((pennies-(dollars*100) - (quarters*25) - (dimes*10) - (nickels*5));
+document.getElementById("output9").innerHTML=("Dollars: " + dollars + "<br>Quarters: " + quarters + "<br>Dimes: " + dimes + "<br>Nickels: " + nickels);
   ///////////////////////// DO NOT MODIFY
   check("money", input); // DO NOT MODIFY
   ///////////////////////// DO NOT MODIFY
