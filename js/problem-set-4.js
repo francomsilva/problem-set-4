@@ -146,10 +146,10 @@ function fluidOunces() {
 
   let gallons=Math.floor(fluidOunces/128);
   let quarts=Math.floor((fluidOunces - (gallons*128))/32);
-  let pints=Math.floor((fluidOunces - (gallons*128) - (quarts*32))/16); 
+  let pints=Math.floor((fluidOunces - (gallons*128) - (quarts*32))/16);
   let cups=Math.floor((fluidOunces - (gallons*128) - (quarts*32) - (pints*16))/8);
   fluidOunces=Math.floor((fluidOunces - (gallons*128) - (quarts*32) - (pints*16) - (cups*8))/1);
-  document.getElementById("output7").innerHTML=("Gallons: " + gallons + "<br/>Quarts: " + quarts + "<br/>Pints: " + pints + "<br/>Cups: " + cups);
+  document.getElementById("output7").innerHTML=("Gallons: " + gallons + "<br/>Quarts: " + quarts + "<br/>Pints: " + pints + "<br/>Cups: " + cups + "<br/>Fluid Ounces: " + fluidOunces );
 
   /////////////////////////////// DO NOT MODIFY
   check("fluidOunces", input); // DO NOT MODIFY
@@ -176,7 +176,7 @@ function ounces() {
   let tons=Math.floor(ounces/32000);
   let pounds=Math.floor((ounces - (tons*32000))/16);
   ounces=Math.floor((ounces - (tons*32000) - (pounds*16))/1);
-  document.getElementById("output8").innerHTML=("Tons: " + tons + "<br/>Pounds: " + pounds + "Ounces: " + ounces);
+  document.getElementById("output8").innerHTML=("Tons: " + tons + "<br/>Pounds: " + pounds + "<br/>Ounces: " + ounces);
 
   ////////////////////////// DO NOT MODIFY
   check("ounces", input); // DO NOT MODIFY
@@ -204,7 +204,7 @@ function money() {
   let quarters=Math.floor((pennies - (dollars*100))/25);
   let dimes=Math.floor((pennies - (dollars*100) - (quarters*25))/10);
   let nickels=Math.floor((pennies - (dollars*100) - (quarters*25) - (dimes*10))/5);
-  let pennies=Math.floor((pennies - (dollars*100) - (quarters*25) - (dimes*10) - (nickels*5))/1);
+  pennies=Math.floor((pennies - (dollars*100) - (quarters*25) - (dimes*10) - (nickels*5))/1);
   document.getElementById("output9").innerHTML=("Dollars: " + dollars + "<br>Quarters: " + quarters + "<br>Dimes: " + dimes + "<br>Nickels: " + nickels + "<br>Pennies: " + pennies);
   ///////////////////////// DO NOT MODIFY
   check("money", input); // DO NOT MODIFY
