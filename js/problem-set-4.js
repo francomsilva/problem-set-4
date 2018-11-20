@@ -233,7 +233,8 @@ function change() {
   let dimes=Math.floor((amount - (quarters*25))/10);
   let nickels=Math.floor((amount - (quarters*25) - (dimes*10))/5);
   let pennies=Math.floor((amount - (quarters*25) - (dimes*10) - (nickels*5))/1);
-  document.getElementById("output10").innerHTML=(quarters + dimes + nickels + pennies + " coins.");
+  let coins= (quarters + dimes + nickels + pennies).toFixed(0);
+  document.getElementById("output10").innerHTML= coins + " coins.";
 
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
